@@ -5,7 +5,6 @@
 jx:
   imagePullSecrets:
   - tekton-container-registry-auth
-  pipelineVariables: {}
   releaseCRD: true
   secrets:
     adminUser:
@@ -33,16 +32,20 @@ jxRequirements:
     registry: ghcr.io
   environments:
   - key: dev
+    owner: DevTicona
+    repository: jx3-gitops
   - key: staging
   - key: production
   ingress:
-    domain: change.me
+    domain: jx.local
     kind: ingress
     namespaceSubDomain: -jx.
     tls:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: DevTicona
   repository: bucketrepo
   secretStorage: local
   vault: {}
