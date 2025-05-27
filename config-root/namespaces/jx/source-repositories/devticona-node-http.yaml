@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: DevTicona
+    provider: github
+    repository: node-http
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: devticona-node-http
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/DevTicona/node-http.git
+  org: DevTicona
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: node-http
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/DevTicona/node-http
