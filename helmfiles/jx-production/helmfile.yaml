@@ -1,0 +1,11 @@
+filepath: ""
+namespace: jx-production
+repositories:
+- name: dev
+  url: http://bucketrepo-jx.jx.local
+releases:
+- chart: dev/node-http
+  version: 0.0.1
+  name: node-http
+templates: {}
+renderedvalues: {}
